@@ -1,11 +1,13 @@
 const express = require('express')
 const { uuid } = require('uuidv4')
+const cors = require('cors')
 
 const app = express()
 
 const users = []
 
 app.use(express.json())
+app.use(cors())
 
 
 app.get('/users',  (req, res ) =>{
